@@ -6,7 +6,8 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(params[:restaurant_id])
+    @review = @restaurant.reviews.build(review_params)
+    @review.save
   end
 
   private
@@ -16,6 +17,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-
+    params.require(:review).permit(:content, :rating)
   end
 end
