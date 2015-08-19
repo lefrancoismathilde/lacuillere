@@ -4,7 +4,7 @@ restaurants_attributes = [
     name:         "Le Dindon en laisse",
     address:      "11 rue Beautreillis 75004 Paris",
     phone:  "0142669343",
-    category:        "italian"
+    category:        "french"
   },
  {
     name:         "Le Bo-Zinc",
@@ -16,7 +16,7 @@ restaurants_attributes = [
     name:         "Georgette",
     address:      "13 rue d'Assas",
     phone:  "0151348985",
-    category:        "italian"
+    category:        "belgian"
   },
 ]
 restaurants_attributes.each { |params| Restaurant.create!(params) }
