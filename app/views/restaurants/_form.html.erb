@@ -1,4 +1,4 @@
-<%= form_for(@restaurant) do |f| %>
+<%= simple_form_for(@restaurant) do |f| %>
   <% if @restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
@@ -11,23 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.select :category, Restaurant::CATEGORIES, prompt: "Choose one" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="container align-center">
+    <div class="row">
+      <div class="field col-xs-12 col-md-4">
+        <%= f.input :name, placeholder: "Chez Georgette" %>
+        <%= f.input :address, placeholder: "13, rue de Paris 75009 Paris" %>
+        <%= f.input :phone_number, placeholder: "01 42 65 04 35" %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES, prompt: "Choose one" %>
+        <%= f.submit %>
+      </div>
+    </div>
   </div>
 <% end %>

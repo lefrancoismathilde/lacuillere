@@ -3,19 +3,19 @@ restaurants_attributes = [
   {
     name:         "Le Dindon en laisse",
     address:      "11 rue Beautreillis 75004 Paris",
-    phone:  "0142669343",
+    phone_number:  "0142669343",
     category:        "french"
   },
  {
     name:         "Le Bo-Zinc",
     address:      "112 avenue Mozart 75016 Paris",
-    phone:  "0143362798",
+    phone_number:  "0143362798",
     category:        "italian"
   },
  {
     name:         "Georgette",
     address:      "13 rue d'Assas",
-    phone:  "0151348985",
+    phone_number:  "0151348985",
     category:        "belgian"
   },
 ]

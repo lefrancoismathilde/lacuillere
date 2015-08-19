@@ -12,7 +12,7 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @restaurant.phone %>
+  <%= @restaurant.phone_number %>
 </p>
 
 <p>
@@ -20,5 +20,12 @@
   <%= @restaurant.category %>
 </p>
 
+
+<h3>My reviews</h3>
+  <% @restaurant.reviews.each do |review| %>
+    <p><%= review.content %> - <%= review.rating %></p>
+  <% end %>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Add review', new_restaurant_review_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
